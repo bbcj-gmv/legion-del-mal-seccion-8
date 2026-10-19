@@ -10,6 +10,8 @@
 
 # 🦹‍♂️ La Legión del Mal 3.0
 
+### es un grupo dedicado a aprender git
+
 > _"El mundo no se conquista con fuerza bruta, se conquista con un buen plan y control de versiones."_
 > — Lex Luthor, fundador
 
