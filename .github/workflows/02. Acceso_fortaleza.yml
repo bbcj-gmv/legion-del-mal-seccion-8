@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-
       - name: El agente llega a la fortaleza
         run: |
           echo "El agente llega a la fortaleza"
