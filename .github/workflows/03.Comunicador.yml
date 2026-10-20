@@ -20,6 +20,20 @@ on:
           - "El Hombre de Piedra"
           - "El Hombre de Hierro"
           - "El Hombre de Oro"
+    mensaje:
+        description: "mensaje para el consejo"
+        required: true
+        default: "la misión ha sido completada con éxito"
+
+    prioridad:
+        description: "prioridad del mensaje"
+        required: true
+        type: choice
+        options: 
+          - "Alta"
+          - "Media"
+          - "Baja"
+
 jobs:
   tranmiter-mensaje:
     runs-on: ubuntu-latest

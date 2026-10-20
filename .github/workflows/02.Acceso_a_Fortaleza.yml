@@ -36,4 +36,4 @@ jobs:
           uname -a
           node --version
           git --version
-          ls inteligencia/
+          ls /
