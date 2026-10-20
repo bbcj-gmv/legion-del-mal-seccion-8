@@ -20,6 +20,7 @@ on:
           - "El Hombre de Piedra"
           - "El Hombre de Hierro"
           - "El Hombre de Oro"
+          - "El Hombre de Plata"
     mensaje:
         description: "mensaje para el consejo"
         required: true
