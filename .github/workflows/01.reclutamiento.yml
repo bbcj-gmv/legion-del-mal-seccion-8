@@ -1,0 +1,36 @@
+name: Reclutameinto de Agente
+on: push
+
+jobs:
+  reporte-de-reclutamiento:
+    runs-on: ubuntu-latest
+    steps:
+      - name: El agente se presenta
+        run: echo "El agente se presenta"
+      - name: El agente se despide
+        run: echo "El agente se despide"
+      - name : Reporte de identidad
+        run: |
+          echo "Reporte de reclutamiento"
+          echo ""
+          echo "Nombre del agente: ${{ github.actor }}"
+          echo ""
+          echo "Repositorio: ${{ github.repository }}"
+          echo "operación: ${{ github.event_name }}"
+          echo "metadatos: ${{ toJson(github.event) }}"
+
+      - name: capacidad del agente
+        run: |
+          echo "capacidad del agente" 
+          uname -a
+          node --version
+          git --version
+          python3 --version
+
+      - name: Reconocimiento del terreno
+        run: |
+          echo "Reconocimiento del terreno"
+          echo "Directorio actual: $(pwd)"
+          echo "Archivos en el directorio:"
+          ls -la
+          ls /

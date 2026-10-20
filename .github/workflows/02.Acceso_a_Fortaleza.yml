@@ -1,0 +1,39 @@
+name: Acceso a la fortaleza prohibida
+on: push
+#on: workflow_dispatch:
+jobs:
+  reporte-de-reclutamiento:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: El agente llega a la fortaleza
+        run: |
+          echo "El agente llega a la fortaleza"
+          echo "Agente ${{ github.actor }} accediendo a la fortaleza prohibida"
+          echo ""
+          echo "Repositorio: ${{ github.repository }}"
+          echo "operación: ${{ github.event_name }}" 
+          df -vh
+          free -h
+          uname -a
+          node --version
+          git --version
+          python3 --version
+          echo "Directorio actual: $(pwd)"
+          ping -c 4 google.com
+          echo "Conexión establecida con google.com"
+          getent passwd
+          getent group
+          lscpu
+          nproc --all
+      - name : "desbloquea la boveda del tesoro"
+        uses: actions/checkout@v3
+      - name: "El agente se despide"
+        run: |
+          echo "El agente se despide"
+          df -vh
+          free -h
+          uname -a
+          node --version
+          git --version
+          ls inteligencia/
