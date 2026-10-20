@@ -1,7 +1,6 @@
 name: Acceso a la fortaleza prohibida
-#on: push
-on:
-  workflow_dispatch:
+on: push
+#on: workflow_dispatch:
 jobs:
   reporte-de-reclutamiento:
     runs-on: ubuntu-latest
