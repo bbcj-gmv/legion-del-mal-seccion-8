@@ -7,23 +7,15 @@ jobs:
     steps:
       - name: El agente se presenta
         run: echo "El agente se presenta"
-    name: Reporte de Reclutamiento
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: Run a multi-line script
+      - name: El agente se despide
+        run: echo "El agente se despide"
+      - name : Reporte de identidad
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo "Reporte de reclutamiento"
+          echo ""
+          echo "Nombre del agente: ${{ github.actor }}"
+          echo ""
+          echo "Repositorio: ${{ github.repository }}"
+          echo "operación: ${{ github.event_name }}"
+          echo "metadatos: ${{ toJson(github.event) }}"
+          
