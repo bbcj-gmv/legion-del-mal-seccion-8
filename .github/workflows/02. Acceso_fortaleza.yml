@@ -1,6 +1,7 @@
 name: Acceso a la fortaleza prohibida
-on: push
-
+#on: push
+on:
+  workflow_dispatch:
 jobs:
   reporte-de-reclutamiento:
     runs-on: ubuntu-latest
@@ -27,3 +28,14 @@ jobs:
           getent group
           lscpu
           nproc --all
+      - name : "desbloquea la boveda del tesoro"
+        uses: actions/checkout@v3
+      - name: "El agente se despide"
+        run: |
+          echo "El agente se despide"
+          df -vh
+          free -h
+          uname -a
+          node --version
+          git --version
+          ls inteligencia/
