@@ -37,7 +37,7 @@ on:
           - "Baja"
 
     cow_character:
-        description: "eprsopersonajes de cow"
+        description: "personajes de cow"
         required: true
         type: choice
         options:
