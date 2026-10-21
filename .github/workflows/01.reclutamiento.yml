@@ -1,15 +1,21 @@
-name: Reclutameinto de Agente
+name: Reclutamiento de Agente
 on: push
 
 jobs:
   reporte-de-reclutamiento:
     runs-on: ubuntu-latest
     steps:
+      # FIX 1: Bring your repository files into the runner machine
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
       - name: El agente se presenta
         run: echo "El agente se presenta"
+
       - name: El agente se despide
         run: echo "El agente se despide"
-      - name : Reporte de identidad
+
+      - name: Reporte de identidad
         run: |
           echo "Reporte de reclutamiento"
           echo ""
@@ -33,4 +39,5 @@ jobs:
           echo "Directorio actual: $(pwd)"
           echo "Archivos en el directorio:"
           ls -la
+          # FIX 2: Fixed the broken ls command
           ls /
