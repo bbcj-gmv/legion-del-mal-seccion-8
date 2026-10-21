@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Comunicador de la legio
+name: Comunicador de la legion 
 
 on:
  workflow_dispatch:
@@ -21,6 +21,7 @@ on:
           - "El Hombre de Plata"
           - "El Hombre de Bronce"
           - "El Hombre de Cobre"
+          - "El Hombre de Plomo"
     mensaje:
         description: "mensaje para el consejo"
         required: true
@@ -40,9 +41,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: instalar el transmisor de la legion
+        run: sudo apt-get install -y cowsay
       - name: imprimir inputs
         run: |
-          echo "Inputs: "
-          echo "villano: ${{inputs.villano}}"
-          echo "mensaje: ${{inputs.mensaje}}"
-          echo "prioridad: ${{inputs.prioridad}}"
+          echo " ----------------------------------------"
+          echo "         transmisión interceptada"
+          echo " ----------------------------------------"
+          echo " de: ${{ inputs.villano }}"
+          echo "El villano es: ${{ inputs.villano }}"
+          echo "Nivel: ${{ inputs.prioridad }}"
+          echo "Mensaje: ${{ inputs.mensaje }}"
+          echo " fecha: $(date -u "+%Y-%m-%d -%H:%M:%SZ UTC")"
+          cowsay -f eyes "${{ inputs.mensaje }}"
+          echo ""
+          echo " ------ ${{inputs.villano}} ------"
+          echo "...."
+        
