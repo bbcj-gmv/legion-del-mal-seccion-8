@@ -28,7 +28,6 @@ jobs:
           echo ""
           ping -c 4 google.com
           echo ""
-          echo "Conexión establecida con google.com"
       - name : "desbloquea la boveda del tesoro"
         uses: actions/checkout@v3
       - name: "El agente se despide"
