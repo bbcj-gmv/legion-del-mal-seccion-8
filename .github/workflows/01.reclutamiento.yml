@@ -39,4 +39,3 @@ jobs:
           echo "Directorio actual: $(pwd)"
           echo "Archivos en el directorio:"
           ls -la
-          # FIX 2: Fixed the broken ls command
