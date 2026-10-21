@@ -23,7 +23,6 @@ jobs:
           echo ""
           echo "Repositorio: ${{ github.repository }}"
           echo "operación: ${{ github.event_name }}"
-          echo "metadatos: ${{ toJson(github.event) }}"
 
       - name: capacidad del agente
         run: |
