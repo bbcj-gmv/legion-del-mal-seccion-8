@@ -27,7 +27,6 @@ jobs:
           echo "Directorio actual: $(pwd)"
           echo ""
           ping -c 4 google.com
-          echo ""
       - name : "desbloquea la boveda del tesoro"
         uses: actions/checkout@v3
       - name: "El agente se despide"
