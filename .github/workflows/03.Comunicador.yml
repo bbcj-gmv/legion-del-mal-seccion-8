@@ -36,6 +36,17 @@ on:
           - "Media"
           - "Baja"
 
+    cow_character:
+        description: "eprsopersonajes de cow"
+        required: true
+        type: choice
+        options:
+          - eyes
+          - dragon
+          - king
+        
+
+
 jobs:
   tranmiter-mensaje:
     runs-on: ubuntu-latest
@@ -57,4 +68,4 @@ jobs:
           echo ""
           echo " ------ ${{inputs.villano}} ------"
           echo "...."
-        
+          cowsay -f "{{inputs.cow_character}}" "${{ inputs.mensaje }}"
