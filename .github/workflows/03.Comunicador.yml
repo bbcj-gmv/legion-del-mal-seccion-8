@@ -21,6 +21,7 @@ on:
           - "El Hombre de Hierro"
           - "El Hombre de Oro"
           - "El Hombre de Plata"
+          - "El Hombre de Bronce"
     mensaje:
         description: "mensaje para el consejo"
         required: true
