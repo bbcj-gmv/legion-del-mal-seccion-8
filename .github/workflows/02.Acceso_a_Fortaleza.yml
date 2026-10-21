@@ -12,15 +12,22 @@ jobs:
           echo "Agente ${{ github.actor }} accediendo a la fortaleza prohibida"
           echo ""
           echo "Repositorio: ${{ github.repository }}"
-          echo "operación: ${{ github.event_name }}" 
           df -vh
+          echo ""
           free -h
+          echo ""
           uname -a
+          echo ""
           node --version
+          echo ""
           git --version
+          echo ""
           python3 --version
+          echo ""
           echo "Directorio actual: $(pwd)"
+          echo ""
           ping -c 4 google.com
+          echo ""
           echo "Conexión establecida con google.com"
       - name : "desbloquea la boveda del tesoro"
         uses: actions/checkout@v3
